@@ -3,7 +3,7 @@
 This is a GUI for the BarryKN Micropatcher.
 The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-micropatcher
 
-Prerequesites:
+# Prerequesites:
 1) A USB drive of at least 16gb
 2) A copy of the BarryKN Micropatcher
 3) A copy of macOS Big Sur Beta
