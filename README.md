@@ -1,5 +1,17 @@
-# Welcome to GitHub Desktop!
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+This is a GUI for the BarryKN Micropatcher.
+The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-micropatcher
+
+Prerequesites:
+1) A USB drive of at least 16gb
+2) A copy of the BarryKN Micropatcher
+3) A copy of macOS Big Sur Beta
+
+
+# Instructions:
+1) Download the BarryKN Micropatcher and place it on your desktop
+2) Get a USB drive and format it as Mac OS Extended (Journaled) with GUID Partition Scheme. Name the drive "USB"
+3) Open MicropatcherGUI and enter password.
+4) Wait until the patcher has finished running.
+5) Restart and follow the instruction at step 9 of the BarryKN Micropatcher and continue from there.
