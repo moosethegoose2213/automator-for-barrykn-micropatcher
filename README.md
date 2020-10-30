@@ -14,4 +14,4 @@ The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-mic
 2) Get a USB drive and format it as Mac OS Extended (Journaled) with GUID Partition Scheme. Name the drive "USB"
 3) Open MicropatcherGUI and enter password.
 4) Wait until the patcher has finished running.
-5) Restart and follow the instruction at step 9 of the BarryKN Micropatcher and continue from there.
+5) Restart and follow the instructions at step 9 of the BarryKN Micropatcher and continue from there.
