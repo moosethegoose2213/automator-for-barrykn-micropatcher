@@ -10,7 +10,7 @@ The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-mic
 
 
 # Instructions:
-1) Download the BarryKN Micropatcher and place it on your desktop
+1) Download the BarryKN Micropatcher and place it on your desktop. Make sure it is named "big-sur-micropatcher-main"
 2) Get a USB drive and format it as Mac OS Extended (Journaled) with GUID Partition Scheme. Name the drive "USB"
 3) Open MicropatcherGUI and enter password.
 4) Wait until the patcher has finished running.
