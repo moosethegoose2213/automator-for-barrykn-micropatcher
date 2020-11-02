@@ -13,14 +13,16 @@ if [ -e /Volumes/Install\ macOS\ Big\ Sur\ Beta/Install\ macOS\ Big\ Sur\ Beta.a
 
     sudo ~/Desktop/big-sur-micropatcher-main/install-setvars.sh
 
-    if [ -e /Volumes/Install\ macOS\ Big\ Sur\ Beta.app/AirPortAtheros40-17G14033+pciid.kext.zip ]; then
-            echo 'The patching process is now complete. You may now close this application and boot off of the USB.'
-            exit
+    if [ -e /Volumes/Install\ macOS\ Big\ Sur\ Beta/kexts/IO80211Family-18G6032.kext.zip ]; then
+        echo 'The patching process is now complete. You may now close this application and boot off of the USB.'
+            
+        exit
     fi
     
-    if [ ! -e /Volumes/Install\ macOS\ Big\ Sur\ Beta.app/AirPortAtheros40-17G14033+pciid.kext.zip ]; then
-            echo 'The patching process has failed! Please try again...'
-            exit
+    if [ ! -e /Volumes/Install macOS\ Big\ Sur\ Beta/kexts/IO80211Family-18G6032.kext.zip ]; then
+        echo 'The patching process has failed! Please try again...'
+            
+        exit
     fi
 fi
 
@@ -104,12 +106,12 @@ sleep 10
 
 sudo ~/Desktop/big-sur-micropatcher-main/install-setvars.sh
 
-if [ -e /Volumes/Install\ macOS\ Big\ Sur\ Beta.app/AirPortAtheros40-17G14033+pciid.kext.zip ]; then
+if [ -e /Volumes/Install macOS Big Sur Beta/kexts/IO80211Family-18G6032.kext.zip ]; then
     echo 'The patching process is now complete. You may now close this application and boot off of the USB.'
     exit
 fi
 
-if [ ! -e /Volumes/Install\ macOS\ Big\ Sur\ Beta.app/AirPortAtheros40-17G14033+pciid.kext.zip ]; then
+if [ ! -e /Volumes/Install macOS Big Sur Beta/kexts/IO80211Family-18G6032.kext.zip ]; then
     echo 'The patching process has failed! Please try again...'
     exit
 fi
