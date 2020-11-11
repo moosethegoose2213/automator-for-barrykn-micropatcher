@@ -1,5 +1,3 @@
-
-# ATTENTION: THIS APPLICATION IS CURRENTLY BROKEN, AS I NEED TO RECREATE THE GUI. THE SCRIPT STILL WORKS, BUT THE GUI IS BROKEN. 
 This is a GUI for the BarryKN Micropatcher.
 The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-micropatcher
 
