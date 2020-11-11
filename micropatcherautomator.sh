@@ -1,6 +1,16 @@
 #!/bin/zsh
+
 echo 'This application is a GUI for the BarryKN Micropatcher.'
-echo 'Thanks to MacHacJac, BenSova, iPixelGalaxy, BarryKN, ASentientBot, and others'
+echo 'Thanks to MacHacJac, MinhTon, BenSova, iPixelGalaxy, BarryKN, ASentientBot, and others'
+
+echo 'Detecting Micropatcher...'
+
+if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
+    
+    Output=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
+
+    sudo mv $Output ~/Desktop/big-sur-micropatcher-main
+fi
 
 if [ -e /Volumes/Install\ macOS\ Big\ Sur\ Beta/Install\ macOS\ Big\ Sur\ Beta.app ]; then
     echo Bootable macOS Big Sur USB detected! Patching...
@@ -11,7 +21,7 @@ if [ -e /Volumes/Install\ macOS\ Big\ Sur\ Beta/Install\ macOS\ Big\ Sur\ Beta.a
 
     sleep 10
 
-    sudo ~/Desktop/big-sur-micropatcher-main/install-setvars.sh
+    osascript -e 'do shell script "~/Desktop/big-sur-micropatcher-main/install-setvars.sh" with administrator privileges'
 
     if [ -e /Volumes/Install\ macOS\ Big\ Sur\ Beta/kexts/IO80211Family-18G6032.kext.zip ]; then
         echo 'The patching process is now complete. You may now close this application and boot off of the USB.'
@@ -19,7 +29,7 @@ if [ -e /Volumes/Install\ macOS\ Big\ Sur\ Beta/Install\ macOS\ Big\ Sur\ Beta.a
         exit
     fi
     
-    if [ ! -e /Volumes/Install macOS\ Big\ Sur\ Beta/kexts/IO80211Family-18G6032.kext.zip ]; then
+    if [ ! -e /Volumes/Install macOS\ Big\ Sur\Beta /kexts/IO80211Family-18G6032.kext.zip ]; then
         echo 'The patching process has failed! Please try again...'
             
         exit
@@ -28,13 +38,13 @@ fi
 
 if [ ! -e /Applications/Install\ macOS\ Big\ Sur\ Beta.app ]; then
     cd ~/Downloads/
-    echo 'Downloading macOS 11.0.1 B1 InstallAssistant.pkg (12GB). This will take a while! You can check the progression in Downloads'
-    curl -o "InstallAssistant.pkg" http://swcdn.apple.com/content/downloads/21/61/001-58883-A_349P9V4VSE/vgf6b2ccrg6y0mk0y526c8hw8knbdwko2v/InstallAssistant.pkg
+    echo 'Downloading macOS 11.0.1 RC2 InstallAssistant.pkg (12GB). This will take a while! You can check the progression in Downloads'
+    curl -o "InstallAssistant.pkg" http://swcdn.apple.com/content/downloads/35/61/001-77425-A_U0QWFSQBB6/3v38yvyhhg8zn9l7aj9nr4pqemhqhbvlq1/InstallAssistant.pkg
     sudo installer -pkg ~/Downloads/InstallAssistant.pkg -target /
 fi
 
 if [ -e /Applications/Install\ macOS\ Big\ Sur\ Beta.app ]; then
-    echo 'Install macoS Big Sur Beta.app detected! Continuing...'
+    echo 'Install macoS Big Sur.app detected! Continuing...'
 
         if [ ! -e ~/Desktop/big-sur-micropatcher-main/micropatcher.sh ]; then
             echo 'Downloading Micropatcher, please wait...'
@@ -47,14 +57,7 @@ fi
 
 #lttstore.com
 
-echo 'Detecting Micropatcher...'
 
-if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
-    
-    Output=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
-
-    sudo mv $Output ~/Desktop/big-sur-micropatcher-main
-fi
 
 
 if [ ! -e ~/Desktop/big-sur-micropatcher-main/micropatcher.sh ]; then
@@ -84,14 +87,19 @@ fi
 echo 'Running createinstallmedia. DO NOT CLOSE.'
 echo 'To check to see if createinstallmedia is progressing, open Activity Monitor and search createinstallmedia.'
 
-sudo /Applications/Install\ macOS\ Big\ Sur\ Beta.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction
+osascript -e 'do shell script "/Applications/Install\\ macOS\\ Big\\ Sur\\ Beta.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction" with administrator privileges'
 
-if [ ! -e  /Volumes/Install macOS Big Sur Beta/Install macOS Big Sur Beta.app ]; then
+if [ -e /Volumes/USB ]; then
     echo createinstallmedia failed! Please try again...
     exit
 fi
 
-echo 'Finished running createinstallmedia.  Thanks to iPixelGalaxy for the Install macOS Big Sur Beta.app check'
+if [ ! -e  /Volumes/Install macOS Big Sur/Install\ macOS\ Big\ Sur\ Beta.app ]; then
+    echo createinstallmedia failed! Please try again...
+    exit
+fi
+
+echo 'Finished running createinstallmedia.  Thanks to iPixelGalaxy for the Install macOS Big Sur.app check'
 
 if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
     echo 'Please re-download Micropatcher, then try again.'
@@ -104,14 +112,14 @@ echo 'Running install-setvars.sh'
 
 sleep 10
 
-sudo ~/Desktop/big-sur-micropatcher-main/install-setvars.sh
+osascript -e 'do shell script "~/Desktop/big-sur-micropatcher-main/install-setvars.sh" with administrator privileges'
 
-if [ -e /Volumes/Install macOS Big Sur Beta/kexts/IO80211Family-18G6032.kext.zip ]; then
+if [ -e '/Volumes/Install macOS Big Sur/kexts/IO80211Family-18G6032.kext.zip' ]; then
     echo 'The patching process is now complete. You may now close this application and boot off of the USB.'
     exit
 fi
 
-if [ ! -e /Volumes/Install macOS Big Sur Beta/kexts/IO80211Family-18G6032.kext.zip ]; then
+if [ ! -e '/Volumes/Install macOS Big Sur Beta/kexts/IO80211Family-18G6032.kext.zip' ]; then
     echo 'The patching process has failed! Please try again...'
     exit
 fi
