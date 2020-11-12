@@ -8,7 +8,7 @@ The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-mic
 
 
 # Instructions:
-1) Download either MicropatcherAutomator.app.zip (post full-release (Install macOS Big Sur.app)) or MicropatcherAutomatorBeta,app,zip (pre-release beta (Install macOS Big Sur Beta.app))
+1) Download either MicropatcherAutomator.app.zip (post full-release (Install macOS Big Sur.app)) or MicropatcherAutomatorBeta.app.zip (pre-release beta (Install macOS Big Sur Beta.app))
 2) Download the BarryKN Micropatcher and place it on your desktop. Make sure it is named "big-sur-micropatcher-main"
 3) Get a USB drive and format it as Mac OS Extended (Journaled) with GUID Partition Scheme. Name the drive "USB"
 4) Open MicropatcherAutomator and enter password.
