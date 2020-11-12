@@ -4,7 +4,7 @@ The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-mic
 # Prerequisites:
 1) A USB drive of at least 16gb
 2) A copy of the BarryKN Micropatcher
-3) A copy of macOS Big Sur Beta
+3) A copy of macOS Big Sur
 
 
 # Instructions:
