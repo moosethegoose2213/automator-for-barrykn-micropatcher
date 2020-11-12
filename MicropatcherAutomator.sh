@@ -1,15 +1,22 @@
 #!/bin/zsh
 
 echo 'This application is a GUI for the BarryKN Micropatcher.'
-echo 'Thanks to MacHacJac, MinhTon, BenSova, iPixelGalaxy, BarryKN, ASentientBot, and others'
+echo 'Thanks to MinhTon, MacHacJac, BenSova, iPixelGalaxy, BarryKN, ASentientBot, and others'
 
 echo 'Detecting Micropatcher...'
 
 if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
     
     Output=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
-
-    sudo mv $Output ~/Desktop/big-sur-micropatcher-main
+   if [[ $Output(ls -A) ]]; then
+        echo Micropatcher not found! Downloading
+        cd ~/Desktop
+        osascript -e 'do shell script sudo curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main'
+        echo 'Unzipping Micropatcher'
+        unzip -q ~/Desktop/big-sur-micropatcher-main.zip
+        DownloadedOutput=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
+    fi
+    sudo mv -f $Output ~/Desktop/big-sur-micropatcher-main
 fi
 
 if [ -e /Volumes/Install\ macOS\ Big\ Sur/Install\ macOS\ Big\ Sur.app ]; then
@@ -35,12 +42,15 @@ if [ -e /Volumes/Install\ macOS\ Big\ Sur/Install\ macOS\ Big\ Sur.app ]; then
         exit
     fi
 fi
-
 if [ ! -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
     cd ~/Downloads/
-    echo 'Downloading macOS 11.0.1 RC2 InstallAssistant.pkg (12GB). This will take a while! You can check the progression in Downloads'
-    curl -o "InstallAssistant.pkg" http://swcdn.apple.com/content/downloads/35/61/001-77425-A_U0QWFSQBB6/3v38yvyhhg8zn9l7aj9nr4pqemhqhbvlq1/InstallAssistant.pkg
-    sudo installer -pkg ~/Downloads/InstallAssistant.pkg -target /
+    echo 'Downloading macOS 11.0.1 InstallAssistant.pkg (12GB). This will take a while! You can check the progression in Downloads'
+    curl -o "InstallAssistant.pkg" http://swcdn.apple.com/content/downloads/50/49/001-79699-A_93OMDU5KFG/dkjnjkq9eax1n2wpf8rik5agns2z43ikqu/InstallAssistant.pkg -target /
+fi
+
+if [ ! -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
+    echo 'Install macOS Big Sur failed to download! Please try again'
+    exit
 fi
 
 if [ -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
@@ -57,13 +67,10 @@ fi
 
 #lttstore.com
 
-
-
-
 if [ ! -e ~/Desktop/big-sur-micropatcher-main/micropatcher.sh ]; then
     echo 'Downloading Micropatcher, please wait...'
     cd ~/Desktop
-    sudo curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/v0.4.0
+    sudo curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main
     echo 'Unzipping Micropatcher'
     unzip -q ~/Desktop/big-sur-micropatcher-main.zip
     DownloadedOutput=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
