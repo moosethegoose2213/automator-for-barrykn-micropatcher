@@ -21,7 +21,11 @@ The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-mic
 
 * Only if you manually downloaded the BarryKN Micropatcher
 
-# Contact
+# Credits:
+moosethegoose2213 did most of the work compiling the shell script.
+Mac-Hac-Jac is working on automating the whole process. Until then, give the most kudos to moosethegoose2213.
+
+# Contact:
 ASentientHedgehog#4406 on Discord
 
 MacHacJac#7648 on Discord and MacHacJac on Macrumors
