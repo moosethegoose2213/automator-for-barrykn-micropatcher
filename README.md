@@ -25,4 +25,5 @@ Optional (if you downloaded the BarryKN Micropatcher manually):
 
 # Contact
 ASentientHedgehog#4406 on Discord
+
 MacHacJac#7648 on Discord and MacHacJac on Macrumors
