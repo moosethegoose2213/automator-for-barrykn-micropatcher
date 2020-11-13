@@ -9,7 +9,7 @@ if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
     
     Output=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
    if [[ $Output(ls -A) ]]; then
-        echo Micropatcher not found! Downloading
+        echo 'Micropatcher not found! Downloading'
         cd ~/Desktop
         osascript -e 'do shell script sudo curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main'
         echo 'Unzipping Micropatcher'
@@ -20,7 +20,7 @@ if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
 fi
 
 if [ -e /Volumes/Install\ macOS\ Big\ Sur/Install\ macOS\ Big\ Sur.app ]; then
-    echo Bootable macOS Big Sur USB detected! Patching...
+    echo 'Bootable macOS Big Sur USB detected! Patching...'
 
     sh ~/Desktop/big-sur-micropatcher-main/micropatcher.sh
 
@@ -97,12 +97,12 @@ echo 'To check to see if createinstallmedia is progressing, open Activity Monito
 osascript -e 'do shell script "/Applications/Install\\ macOS\\ Big\\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction" with administrator privileges'
 
 if [ -e /Volumes/USB ]; then
-    echo createinstallmedia failed! Please try again...
+    echo 'createinstallmedia failed! Please try again...'
     exit
 fi
 
 if [ ! -e  /Volumes/Install macOS Big Sur/Install\ macOS\ Big\ Sur.app ]; then
-    echo createinstallmedia failed! Please try again...
+    echo 'createinstallmedia failed! Please try again...'
     exit
 fi
 
