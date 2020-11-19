@@ -11,12 +11,18 @@ if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
    if [[ $Output(ls -A) ]]; then
         echo 'Micropatcher not found! Downloading'
         cd ~/Desktop
-        osascript -e 'do shell script sudo curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main'
+        osascript -e 'do shell script "curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main" with administrator privileges'
         echo 'Unzipping Micropatcher'
         unzip -q ~/Desktop/big-sur-micropatcher-main.zip
         DownloadedOutput=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
+        sudo mv -f $DownloadedOutput ~/Desktop/big-sur-micropatcher-main
     fi
     sudo mv -f $Output ~/Desktop/big-sur-micropatcher-main
+fi
+
+if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
+    echo 'Micropatcher not found! Please try again. If this issue persists, please download Micropatcher manually.'
+    exit
 fi
 
 if [ -e /Volumes/Install\ macOS\ Big\ Sur/Install\ macOS\ Big\ Sur.app ]; then
@@ -46,6 +52,8 @@ if [ ! -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
     cd ~/Downloads/
     echo 'Downloading macOS 11.0.1 InstallAssistant.pkg (12GB). This will take a while! You can check the progression in Downloads'
     curl -o "InstallAssistant.pkg" http://swcdn.apple.com/content/downloads/50/49/001-79699-A_93OMDU5KFG/dkjnjkq9eax1n2wpf8rik5agns2z43ikqu/InstallAssistant.pkg -target /
+    echo 'Extracting Install macOS Big Sur...'
+    sudo installer -pkg "~/Downloads/InstallAssistant.pkg" -target /
 fi
 
 if [ ! -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
@@ -54,7 +62,7 @@ if [ ! -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
 fi
 
 if [ -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
-    echo 'Install macoS Big Sur.app detected! Continuing...'
+    echo 'Install macOS Big Sur.app detected! Continuing...'
 
         if [ ! -e ~/Desktop/big-sur-micropatcher-main/micropatcher.sh ]; then
             echo 'Downloading Micropatcher, please wait...'
