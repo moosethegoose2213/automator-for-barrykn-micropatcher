@@ -2,8 +2,10 @@
 
 echo 'This application is a GUI for the BarryKN Micropatcher.'
 echo 'Thanks to MinhTon, MacHacJac, BenSova, iPixelGalaxy, BarryKN, ASentientBot, and others'
-
 echo 'Detecting Micropatcher...'
+if [ -e /tmp/choice ]; then
+    rm /tmp/choice
+fi
 
 if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
     
@@ -11,7 +13,7 @@ if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
    if [[ $Output(ls -A) ]]; then
         echo 'Micropatcher not found! Downloading'
         cd ~/Desktop
-        osascript -e 'do shell script "curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main" with administrator privileges'
+        osascript -e 'do shell script "sudo curl -o 'big-sur-micropatcher-main.zip' https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main" with administrator privileges'
         echo 'Unzipping Micropatcher'
         unzip -q ~/Desktop/big-sur-micropatcher-main.zip
         DownloadedOutput=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
@@ -21,7 +23,7 @@ if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
 fi
 
 if [ ! -d ~/Desktop/big-sur-micropatcher-main ]; then
-    echo 'Micropatcher not found! Please try again. If this issue persists, please download Micropatcher manually.'
+    echo 'Micropatcher not found! Please try again. If this issue persists, please download Micropatcher manually and place on Desktop.'
     exit
 fi
 
@@ -48,6 +50,7 @@ if [ -e /Volumes/Install\ macOS\ Big\ Sur/Install\ macOS\ Big\ Sur.app ]; then
         exit
     fi
 fi
+
 if [ ! -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
     cd ~/Downloads/
     echo 'Downloading macOS 11.0.1 InstallAssistant.pkg (12GB). This will take a while! You can check the progression in Downloads'
@@ -67,7 +70,7 @@ if [ -e /Applications/Install\ macOS\ Big\ Sur.app ]; then
         if [ ! -e ~/Desktop/big-sur-micropatcher-main/micropatcher.sh ]; then
             echo 'Downloading Micropatcher, please wait...'
             cd ~/Desktop
-            sudo curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/v0.4.0
+            sudo curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main
             echo 'Unzipping Micropatcher'
             unzip -q ~/Desktop/big-sur-micropatcher-main.zip
         fi
@@ -78,7 +81,7 @@ fi
 if [ ! -e ~/Desktop/big-sur-micropatcher-main/micropatcher.sh ]; then
     echo 'Downloading Micropatcher, please wait...'
     cd ~/Desktop
-    sudo curl -o "big-sur-micropatcher-main.zip" https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main
+    osascript -e 'do shell script "sudo curl -o 'big-sur-micropatcher-main.zip' https://codeload.github.com/barrykn/big-sur-micropatcher/zip/main" with administrator privileges'
     echo 'Unzipping Micropatcher'
     unzip -q ~/Desktop/big-sur-micropatcher-main.zip
     DownloadedOutput=$(sudo find ~/Desktop -type d -name '*big-sur-micropatcher-*')
@@ -94,17 +97,22 @@ fi
 
 echo 'Micropatcher detected! Continuing...'
 
-if [ ! -d /Volumes/USB ]; then
-    echo '/Volumes/USB is not mounted, please confirm that your USB is detected by the machine and named "USB"'
+USB_VOLUME=$(osascript -e 'return (choose from list (get paragraphs of (do shell script "ls /Volumes")) with prompt "What volume would you like to use?") as string')
+
+if [ ! -d /Volumes/$USB_Volume ]; then
+    echo 'USB is not mounted, please confirm that your USB is detected by the machine and named "USB"'
     exit
 fi
+
+echo $(echo "/Volumes/$USB_VOLUME" | sed 's/ /\ /g') >> /tmp/choice
+
 
 echo 'Running createinstallmedia. DO NOT CLOSE.'
 echo 'To check to see if createinstallmedia is progressing, open Activity Monitor and search createinstallmedia.'
 
-osascript -e 'do shell script "/Applications/Install\\ macOS\\ Big\\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/USB --nointeraction" with administrator privileges'
 
-if [ -e /Volumes/USB ]; then
+osascript -e 'do shell script "/Applications/Install\\ macOS\\ Big\\ Sur.app/Contents/Resources/createinstallmedia --volume " & (quoted form of (do shell script "cat /tmp/choice")) & " --nointeraction" with administrator privileges'
+if [ -e /Volumes/$USB_VOLUME ]; then
     echo 'createinstallmedia failed! Please try again...'
     exit
 fi
@@ -124,8 +132,6 @@ fi
 sh ~/Desktop/big-sur-micropatcher-main/micropatcher.sh
 
 echo 'Running install-setvars.sh'
-
-sleep 10
 
 osascript -e 'do shell script "~/Desktop/big-sur-micropatcher-main/install-setvars.sh" with administrator privileges'
 
