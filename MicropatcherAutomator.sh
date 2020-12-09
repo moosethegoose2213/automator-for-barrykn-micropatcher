@@ -47,19 +47,19 @@ if [ -e /Volumes/Install\ macOS\ Big\ Sur/Install\ macOS\ Big\ Sur.app ]; then
         OPTION=$(osascript -e 'display alert "Finished patching!" message "Would you like to restart to your Installer Now? If so, please save your work before restarting" buttons {"Yes", "No"}')
         
         if [[ $OPTION == 'button returned:Yes' ]]; then
-            osascript -e 'do shell script "Sudo nvram -c" with administrator privileges'
-            osascript -e 'do shell script "sudo nvram csr-active-config=%7f%08%00%00" with administrator privileges'
-            osascript -e 'do shell script "sudo nvram boot-args='-no_compat_check'" with administrator privileges'
+            osascript -e 'do shell script "nvram -c" with administrator privileges'
+            osascript -e 'do shell script "nvram csr-active-config=%7f%08%00%00" with administrator privileges'
+            osascript -e 'do shell script "nvram boot-args='-no_compat_check'" with administrator privileges'
             osascript -e 'do shell script "bless -mount \"/Volumes/Install macOS Big Sur\" -setBoot" with administrator privileges'
-            osascript -e 'tell application "Finder" to restart'
+            osascript -e 'do shell script "reboot" with administrator privileges'
             exit
         fi
             
         if $OPTION == 'button returned:No'; then
             cp ~/Desktop/postautomatorv2.sh /Volumes/Install\ macOS\ Big\ Sur/postautomatorv2.sh
-            osascript -e 'do shell script "Sudo nvram -c" with administrator privileges'
-            osascript -e 'do shell script "sudo nvram csr-active-config=%7f%08%00%00" with administrator privileges'
-            osascript -e 'do shell script "sudo nvram boot-args='-no_compat_check'" with administrator privileges'
+            osascript -e 'do shell script "nvram -c" with administrator privileges'
+            osascript -e 'do shell script "nvram csr-active-config=%7f%08%00%00" with administrator privileges'
+            osascript -e 'do shell script "nvram boot-args='-no_compat_check'" with administrator privileges'
             osascript -e 'display alert "Reboot" message "Please reboot into your installer to continue patching..." buttons {"Okay"}'
             exit
         fi
@@ -177,18 +177,18 @@ if [ -e '/Volumes/Install macOS Big Sur/kexts/IO80211Family-18G6032.kext.zip' ];
     echo 'The patching process is now complete!'
     OPTION=$(osascript -e 'display alert "Finished patching!" message "Would you like to restart to your install media now? If so, please save your work before restarting. Your NVRAM will now be reset." buttons {"Yes", "No"}')
     if [[ $OPTION == 'button returned:Yes' ]]; then
-        osascript -e 'do shell script "Sudo nvram -c" with administrator privileges'
-        osascript -e 'do shell script "sudo nvram csr-active-config=%7f%08%00%00" with administrator privileges'
-        osascript -e 'do shell script "sudo nvram boot-args='-no_compat_check'" with administrator privileges'
+        osascript -e 'do shell script "nvram -c" with administrator privileges'
+        osascript -e 'do shell script "nvram csr-active-config=%7f%08%00%00" with administrator privileges'
+        osascript -e 'do shell script "nvram boot-args='-no_compat_check'" with administrator privileges'
         osascript -e 'do shell script "bless -mount \"/Volumes/Install macOS Big Sur\" -setBoot" with administrator privileges'
-        osascript -e 'tell application "Finder" to restart'
+        osascript -e 'do shell script "reboot" with administrator privileges'
     exit
     fi
         
     if $OPTION == 'button returned:No'; then
-        osascript -e 'do shell script "Sudo nvram -c" with administrator privileges'
-        osascript -e 'do shell script "sudo nvram csr-active-config=%7f%08%00%00" with administrator privileges'
-        osascript -e 'do shell script "sudo nvram boot-args='-no_compat_check'" with administrator privileges'
+        osascript -e 'do shell script "nvram -c" with administrator privileges'
+        osascript -e 'do shell script "nvram csr-active-config=%7f%08%00%00" with administrator privileges'
+        osascript -e 'do shell script "nvram boot-args='-no_compat_check'" with administrator privileges'
         osascript -e 'display alert "Reboot" message "Please reboot into your installer to continue patching..." buttons {"Okay"}'
         exit
     fi
