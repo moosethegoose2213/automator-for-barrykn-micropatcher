@@ -17,7 +17,7 @@ The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-mic
 
 3) Open MicropatcherAutomator and enter password.
 4) Wait until the patcher has finished running.
-5) Restart and follow the instructions at step 9 of the BarryKN Micropatcher and continue from there.
+5) Restart and follow the instructions at step 13 of the BarryKN Micropatcher and continue from there.
 
 * Only if you manually downloaded the BarryKN Micropatcher
 
