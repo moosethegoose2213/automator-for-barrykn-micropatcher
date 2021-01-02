@@ -1,12 +1,11 @@
 # MicropatcherAutomator
 
-This is a Automator for the BarryKN Micropatcher.
+This is an Automator for the BarryKN Micropatcher.
 The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-micropatcher
 
 ## Prerequisites:
 1) A USB drive of at least 16gb
-2) A copy of the BarryKN Big Sur Micropatcher
-3) A copy of macOS Big Sur
+2) A copy of macOS Big Sur
 
 
 ## Instructions:
@@ -21,7 +20,7 @@ The BarryKN Micropatcher is located here: https://github.com/barrykn/big-sur-mic
 
 
 ## Credits:
-None of this would be possible without BarryKN, who has been working hard at developing (and constantly updating) his micropatcher. Also, special thanks to MinhTon, ASentientBot, jackluke, MacHacJac and BenSova for their help in developing this automator.
+None of this would be possible without BarryKN, who has been working hard at developing (and constantly updating) his micropatcher. Also, special thanks to MinhTon, BenSova, ASentientBot, jackluke, and MacHacJac for their help in developing this automator.
 
 ## Contact:
 Unsupported Macs Discord: https://discord.gg/XbbWAsE
