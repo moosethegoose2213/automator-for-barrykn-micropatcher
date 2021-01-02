@@ -23,7 +23,7 @@
 11) When complete, a dialog will appear. Press the `Restart` button to restart to complete your installation.
 
 ## Credits:
-None of this would be possible without BarryKN, who has been working hard at developing (and constantly updating) his micropatcher. Also, special thanks to MinhTon, BenSova, ASentientBot, jackluke, and MacHacJac for their help in developing this automator.
+None of this would be possible without MacHacJac, who has been working hard at developing (and constantly updating) his micropatcher. Also, special thanks to MinhTon, BenSova, ASentientBot, jackluke, and BarryKN for their help in developing this automator.
 
 ## Contact:
 Unsupported Macs Discord: https://discord.gg/XbbWAsE
