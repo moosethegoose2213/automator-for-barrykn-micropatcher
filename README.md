@@ -2,6 +2,8 @@
 
 # MicropatcherAutomator
 
+<img src="https://user-images.githubusercontent.com/37860569/103453837-a7810c80-4d10-11eb-82e9-31e1b026482e.png">
+
 ## Prerequisites:
 1) A USB drive of at least 14GB.
 2) A copy of macOS Big Sur (optional)
