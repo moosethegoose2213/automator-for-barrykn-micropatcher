@@ -155,9 +155,11 @@ NSString *rootPassword = nil;
         }
     }
     
+    long startBytes = 0;
+    
     if ([[NSFileManager defaultManager] fileExistsAtPath:@"/tmp/InstallAssistant.pkg"]) {
-        [self performSelectorInBackground:@selector(prepareInstaller) withObject:nil];
-        return;
+        startBytes = [[[NSFileManager defaultManager] attributesOfItemAtPath:@"/tmp/InstallAssistant.pkg" error:nil] fileSize];
+        [self showErrorAlert:@"MicropatcherAutomator" withDescription:@"Download will be continued from the point where interrupted."];
     }
     
     NSURL *jsonURL = [[NSURL alloc]initWithString:@"https://bensova.github.io/patched-sur/installers/Release.json"];
@@ -167,8 +169,11 @@ NSString *rootPassword = nil;
     for (NSDictionary *urlObject in jsonDict) {
         [URLs addObject:urlObject[@"URL"]];
     }
-    NSURLRequest *requestDownload = [NSURLRequest requestWithURL:[NSURL URLWithString:[URLs lastObject]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:6000.0];
+    NSMutableURLRequest *requestDownload = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:[URLs lastObject]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:6000.0];
+    NSString *range = [NSString stringWithFormat:@"bytes=%ld-", startBytes];
+    [requestDownload setValue:range forHTTPHeaderField:@"Range"];
     NSURLDownload  *download = [[NSURLDownload alloc] initWithRequest:requestDownload delegate:self];
+    [download setDeletesFileUponFailure:false];
     [self.downloadDescription setStringValue:@"Downloading InstallAssistant.pkg..."];
     [self.continueButton setEnabled:NO];
     if (!download) {
@@ -177,6 +182,8 @@ NSString *rootPassword = nil;
         [self showErrorAlert:@"MicropatcherAutomator" withDescription:@"An unknown error occured."];
     }
 }
+
+
 
 - (IBAction)hedgehogDownloadInstallerContinue:(NSButton *)sender {
     NSAlert *alert = [[NSAlert alloc] init];
