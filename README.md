@@ -29,3 +29,4 @@ None of this would be possible without BarryKN, who has been working hard at dev
 Unsupported Macs Discord: https://discord.gg/XbbWAsE
 
 ASentientHedgehog#4406 on Discord
+#hedgehog-patcher channel
