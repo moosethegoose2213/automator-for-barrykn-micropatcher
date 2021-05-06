@@ -15,7 +15,6 @@
 		0130A31325A0296D00C52E2D /* Utilities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0130A31225A0296C00C52E2D /* Utilities.plist */; };
 		0130CE69259F431D00334CC7 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 0130CE68259F431C00334CC7 /* success.png */; };
 		0130CE6D259F433200334CC7 /* HedgehogSuccessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0130CE6B259F433200334CC7 /* HedgehogSuccessView.m */; };
-		0130CE6E259F433200334CC7 /* HedgehogSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0130CE6C259F433200334CC7 /* HedgehogSuccessView.xib */; };
 		0130CE70259F438300334CC7 /* restart.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0130CE6F259F438300334CC7 /* restart.tiff */; };
 		0148D3432598371E0012A659 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0148D3422598371E0012A659 /* AppDelegate.m */; };
 		0148D345259837220012A659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0148D344259837220012A659 /* Assets.xcassets */; };
@@ -26,15 +25,11 @@
 		0148D364259856180012A659 /* BigSur.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0148D362259856170012A659 /* BigSur.tiff */; };
 		0148D365259856180012A659 /* Internal.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0148D363259856180012A659 /* Internal.tiff */; };
 		0148D36E259857920012A659 /* HedgehogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0148D36C259857920012A659 /* HedgehogViewController.m */; };
-		0148D36F259857920012A659 /* HedgehogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0148D36D259857920012A659 /* HedgehogViewController.xib */; };
 		0148D37325985A8C0012A659 /* HedgehogPatchUSB.m in Sources */ = {isa = PBXBuildFile; fileRef = 0148D37125985A8C0012A659 /* HedgehogPatchUSB.m */; };
-		0148D37425985A8C0012A659 /* HedgehogPatchUSB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0148D37225985A8C0012A659 /* HedgehogPatchUSB.xib */; };
 		0148D3782598601E0012A659 /* HedgehogInstallerApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 0148D3762598601E0012A659 /* HedgehogInstallerApp.m */; };
-		0148D3792598601E0012A659 /* HedgehogInstallerApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0148D3772598601E0012A659 /* HedgehogInstallerApp.xib */; };
 		0148D37C2598621E0012A659 /* Folder.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0148D37A2598621D0012A659 /* Folder.tiff */; };
 		0148D37D2598621E0012A659 /* Download.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0148D37B2598621E0012A659 /* Download.tiff */; };
 		0148D381259863490012A659 /* HedgehogChooseVolume.m in Sources */ = {isa = PBXBuildFile; fileRef = 0148D37F259863490012A659 /* HedgehogChooseVolume.m */; };
-		0148D382259863490012A659 /* HedgehogChooseVolume.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0148D380259863490012A659 /* HedgehogChooseVolume.xib */; };
 		0148D384259864F90012A659 /* Removable.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0148D383259864F90012A659 /* Removable.tiff */; };
 		0148D3862598662E0012A659 /* BigSurInstall.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0148D3852598662E0012A659 /* BigSurInstall.tiff */; };
 		0193641C2598AAAF0042CC75 /* arrowbuttonLeft.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 0193641B2598AAAF0042CC75 /* arrowbuttonLeft.tiff */; };
@@ -43,11 +38,16 @@
 		01BC36AB259A8D1A00EB57AB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BC36A9259A8D1A00EB57AB /* MainMenu.xib */; };
 		01BC36AE259A8D1A00EB57AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BC36AD259A8D1A00EB57AB /* main.m */; };
 		01FDD2662599AFEE00EF2D41 /* HedgehogDownloadInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FDD2642599AFEE00EF2D41 /* HedgehogDownloadInstaller.m */; };
-		01FDD2672599AFEE00EF2D41 /* HedgehogDownloadInstaller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FDD2652599AFEE00EF2D41 /* HedgehogDownloadInstaller.xib */; };
 		01FDD2692599B84100EF2D41 /* Installer.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 01FDD2682599B84100EF2D41 /* Installer.tiff */; };
 		01FDD26F2599F25800EF2D41 /* Hedgehog_Boot.icns in Resources */ = {isa = PBXBuildFile; fileRef = 01FDD26A2599F25300EF2D41 /* Hedgehog_Boot.icns */; };
 		01FDD2712599F25800EF2D41 /* boot.efi in Resources */ = {isa = PBXBuildFile; fileRef = 01FDD26C2599F25600EF2D41 /* boot.efi */; };
 		01FDD2792599FB8B00EF2D41 /* automator.sh in Resources */ = {isa = PBXBuildFile; fileRef = 01FDD2782599FB8B00EF2D41 /* automator.sh */; };
+		39CF692F264445DB00CF3398 /* HedgehogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39CF6931264445DB00CF3398 /* HedgehogViewController.xib */; };
+		39CF6932264445E900CF3398 /* HedgehogInstallerApp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39CF6934264445E900CF3398 /* HedgehogInstallerApp.xib */; };
+		39CF6935264445F000CF3398 /* HedgehogDownloadInstaller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39CF6937264445F000CF3398 /* HedgehogDownloadInstaller.xib */; };
+		39CF6938264445FB00CF3398 /* HedgehogChooseVolume.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39CF693A264445FB00CF3398 /* HedgehogChooseVolume.xib */; };
+		39CF693B2644460700CF3398 /* HedgehogPatchUSB.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39CF693D2644460700CF3398 /* HedgehogPatchUSB.xib */; };
+		39CF693E2644460D00CF3398 /* HedgehogSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39CF69402644460D00CF3398 /* HedgehogSuccessView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +57,6 @@
 		0130CE68259F431C00334CC7 /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
 		0130CE6A259F433200334CC7 /* HedgehogSuccessView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HedgehogSuccessView.h; sourceTree = "<group>"; };
 		0130CE6B259F433200334CC7 /* HedgehogSuccessView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HedgehogSuccessView.m; sourceTree = "<group>"; };
-		0130CE6C259F433200334CC7 /* HedgehogSuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HedgehogSuccessView.xib; sourceTree = "<group>"; };
 		0130CE6F259F438300334CC7 /* restart.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = restart.tiff; sourceTree = "<group>"; };
 		0148D33E2598371E0012A659 /* MicropatcherAutomator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicropatcherAutomator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0148D3412598371E0012A659 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,18 +72,14 @@
 		0148D363259856180012A659 /* Internal.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Internal.tiff; sourceTree = "<group>"; };
 		0148D36B259857920012A659 /* HedgehogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HedgehogViewController.h; sourceTree = "<group>"; };
 		0148D36C259857920012A659 /* HedgehogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HedgehogViewController.m; sourceTree = "<group>"; };
-		0148D36D259857920012A659 /* HedgehogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HedgehogViewController.xib; sourceTree = "<group>"; };
 		0148D37025985A8C0012A659 /* HedgehogPatchUSB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HedgehogPatchUSB.h; sourceTree = "<group>"; };
 		0148D37125985A8C0012A659 /* HedgehogPatchUSB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HedgehogPatchUSB.m; sourceTree = "<group>"; };
-		0148D37225985A8C0012A659 /* HedgehogPatchUSB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HedgehogPatchUSB.xib; sourceTree = "<group>"; };
 		0148D3752598601E0012A659 /* HedgehogInstallerApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HedgehogInstallerApp.h; sourceTree = "<group>"; };
 		0148D3762598601E0012A659 /* HedgehogInstallerApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HedgehogInstallerApp.m; sourceTree = "<group>"; };
-		0148D3772598601E0012A659 /* HedgehogInstallerApp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HedgehogInstallerApp.xib; sourceTree = "<group>"; };
 		0148D37A2598621D0012A659 /* Folder.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Folder.tiff; sourceTree = "<group>"; };
 		0148D37B2598621E0012A659 /* Download.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Download.tiff; sourceTree = "<group>"; };
 		0148D37E259863490012A659 /* HedgehogChooseVolume.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HedgehogChooseVolume.h; sourceTree = "<group>"; };
 		0148D37F259863490012A659 /* HedgehogChooseVolume.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HedgehogChooseVolume.m; sourceTree = "<group>"; };
-		0148D380259863490012A659 /* HedgehogChooseVolume.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HedgehogChooseVolume.xib; sourceTree = "<group>"; };
 		0148D383259864F90012A659 /* Removable.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Removable.tiff; sourceTree = "<group>"; };
 		0148D3852598662E0012A659 /* BigSurInstall.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = BigSurInstall.tiff; sourceTree = "<group>"; };
 		0193641B2598AAAF0042CC75 /* arrowbuttonLeft.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = arrowbuttonLeft.tiff; sourceTree = "<group>"; };
@@ -98,11 +93,24 @@
 		01BC36AF259A8D1A00EB57AB /* PostAutomator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PostAutomator.entitlements; sourceTree = "<group>"; };
 		01FDD2632599AFEE00EF2D41 /* HedgehogDownloadInstaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HedgehogDownloadInstaller.h; sourceTree = "<group>"; };
 		01FDD2642599AFEE00EF2D41 /* HedgehogDownloadInstaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HedgehogDownloadInstaller.m; sourceTree = "<group>"; };
-		01FDD2652599AFEE00EF2D41 /* HedgehogDownloadInstaller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HedgehogDownloadInstaller.xib; sourceTree = "<group>"; };
 		01FDD2682599B84100EF2D41 /* Installer.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = Installer.tiff; sourceTree = "<group>"; };
 		01FDD26A2599F25300EF2D41 /* Hedgehog_Boot.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Hedgehog_Boot.icns; sourceTree = "<group>"; };
 		01FDD26C2599F25600EF2D41 /* boot.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = boot.efi; sourceTree = "<group>"; };
 		01FDD2782599FB8B00EF2D41 /* automator.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = automator.sh; sourceTree = "<group>"; };
+		39CF6930264445DB00CF3398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HedgehogViewController.xib; sourceTree = "<group>"; };
+		39CF6933264445E900CF3398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HedgehogInstallerApp.xib; sourceTree = "<group>"; };
+		39CF6936264445F000CF3398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HedgehogDownloadInstaller.xib; sourceTree = "<group>"; };
+		39CF6939264445FB00CF3398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HedgehogChooseVolume.xib; sourceTree = "<group>"; };
+		39CF693C2644460700CF3398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HedgehogPatchUSB.xib; sourceTree = "<group>"; };
+		39CF693F2644460D00CF3398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/HedgehogSuccessView.xib; sourceTree = "<group>"; };
+		39CF694926444E9C00CF3398 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HedgehogChooseVolume.xib; sourceTree = "<group>"; };
+		39CF694A26444F3700CF3398 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HedgehogDownloadInstaller.xib; sourceTree = "<group>"; };
+		39CF694B26444FF900CF3398 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HedgehogInstallerApp.xib; sourceTree = "<group>"; };
+		39CF694C264450DE00CF3398 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HedgehogPatchUSB.xib; sourceTree = "<group>"; };
+		39CF694D2644518900CF3398 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HedgehogSuccessView.xib; sourceTree = "<group>"; };
+		39CF694E264451D600CF3398 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		39CF694F2644529400CF3398 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		39CF6950264453F900CF3398 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/HedgehogViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,12 +184,12 @@
 		0193641D2598AEC90042CC75 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0148D36D259857920012A659 /* HedgehogViewController.xib */,
-				0148D3772598601E0012A659 /* HedgehogInstallerApp.xib */,
-				01FDD2652599AFEE00EF2D41 /* HedgehogDownloadInstaller.xib */,
-				0148D380259863490012A659 /* HedgehogChooseVolume.xib */,
-				0148D37225985A8C0012A659 /* HedgehogPatchUSB.xib */,
-				0130CE6C259F433200334CC7 /* HedgehogSuccessView.xib */,
+				39CF6931264445DB00CF3398 /* HedgehogViewController.xib */,
+				39CF6934264445E900CF3398 /* HedgehogInstallerApp.xib */,
+				39CF6937264445F000CF3398 /* HedgehogDownloadInstaller.xib */,
+				39CF693A264445FB00CF3398 /* HedgehogChooseVolume.xib */,
+				39CF693D2644460700CF3398 /* HedgehogPatchUSB.xib */,
+				39CF69402644460D00CF3398 /* HedgehogSuccessView.xib */,
 				0148D346259837220012A659 /* MainMenu.xib */,
 			);
 			path = Views;
@@ -282,6 +290,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 0148D3352598371E0012A659;
 			productRefGroup = 0148D33F2598371E0012A659 /* Products */;
@@ -301,7 +310,7 @@
 			files = (
 				0130A30B25A0023200C52E2D /* PostAutomator.app in Resources */,
 				0130CE70259F438300334CC7 /* restart.tiff in Resources */,
-				01FDD2672599AFEE00EF2D41 /* HedgehogDownloadInstaller.xib in Resources */,
+				39CF6935264445F000CF3398 /* HedgehogDownloadInstaller.xib in Resources */,
 				01FDD26F2599F25800EF2D41 /* Hedgehog_Boot.icns in Resources */,
 				01FDD2712599F25800EF2D41 /* boot.efi in Resources */,
 				0193641C2598AAAF0042CC75 /* arrowbuttonLeft.tiff in Resources */,
@@ -311,20 +320,20 @@
 				01FDD2692599B84100EF2D41 /* Installer.tiff in Resources */,
 				0148D384259864F90012A659 /* Removable.tiff in Resources */,
 				0148D345259837220012A659 /* Assets.xcassets in Resources */,
-				0148D37425985A8C0012A659 /* HedgehogPatchUSB.xib in Resources */,
+				39CF693B2644460700CF3398 /* HedgehogPatchUSB.xib in Resources */,
 				0148D35C25983DAE0012A659 /* arrowbutton.tiff in Resources */,
 				0148D365259856180012A659 /* Internal.tiff in Resources */,
 				0148D37D2598621E0012A659 /* Download.tiff in Resources */,
 				012DBEEA25A0559700455B9C /* big-sur-micropatcher-main in Resources */,
-				0148D36F259857920012A659 /* HedgehogViewController.xib in Resources */,
+				39CF692F264445DB00CF3398 /* HedgehogViewController.xib in Resources */,
 				0148D3862598662E0012A659 /* BigSurInstall.tiff in Resources */,
 				0148D37C2598621E0012A659 /* Folder.tiff in Resources */,
 				01FDD2792599FB8B00EF2D41 /* automator.sh in Resources */,
 				0148D364259856180012A659 /* BigSur.tiff in Resources */,
-				0148D382259863490012A659 /* HedgehogChooseVolume.xib in Resources */,
-				0148D3792598601E0012A659 /* HedgehogInstallerApp.xib in Resources */,
+				39CF6938264445FB00CF3398 /* HedgehogChooseVolume.xib in Resources */,
+				39CF6932264445E900CF3398 /* HedgehogInstallerApp.xib in Resources */,
 				0148D348259837220012A659 /* MainMenu.xib in Resources */,
-				0130CE6E259F433200334CC7 /* HedgehogSuccessView.xib in Resources */,
+				39CF693E2644460D00CF3398 /* HedgehogSuccessView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +383,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0148D347259837220012A659 /* Base */,
+				39CF694E264451D600CF3398 /* ru */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -382,8 +392,63 @@
 			isa = PBXVariantGroup;
 			children = (
 				01BC36AA259A8D1A00EB57AB /* Base */,
+				39CF694F2644529400CF3398 /* ru */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		39CF6931264445DB00CF3398 /* HedgehogViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39CF6930264445DB00CF3398 /* Base */,
+				39CF6950264453F900CF3398 /* ru */,
+			);
+			name = HedgehogViewController.xib;
+			sourceTree = "<group>";
+		};
+		39CF6934264445E900CF3398 /* HedgehogInstallerApp.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39CF6933264445E900CF3398 /* Base */,
+				39CF694B26444FF900CF3398 /* ru */,
+			);
+			name = HedgehogInstallerApp.xib;
+			sourceTree = "<group>";
+		};
+		39CF6937264445F000CF3398 /* HedgehogDownloadInstaller.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39CF6936264445F000CF3398 /* Base */,
+				39CF694A26444F3700CF3398 /* ru */,
+			);
+			name = HedgehogDownloadInstaller.xib;
+			sourceTree = "<group>";
+		};
+		39CF693A264445FB00CF3398 /* HedgehogChooseVolume.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39CF6939264445FB00CF3398 /* Base */,
+				39CF694926444E9C00CF3398 /* ru */,
+			);
+			name = HedgehogChooseVolume.xib;
+			sourceTree = "<group>";
+		};
+		39CF693D2644460700CF3398 /* HedgehogPatchUSB.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39CF693C2644460700CF3398 /* Base */,
+				39CF694C264450DE00CF3398 /* ru */,
+			);
+			name = HedgehogPatchUSB.xib;
+			sourceTree = "<group>";
+		};
+		39CF69402644460D00CF3398 /* HedgehogSuccessView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39CF693F2644460D00CF3398 /* Base */,
+				39CF694D2644518900CF3398 /* ru */,
+			);
+			name = HedgehogSuccessView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -393,6 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -451,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
