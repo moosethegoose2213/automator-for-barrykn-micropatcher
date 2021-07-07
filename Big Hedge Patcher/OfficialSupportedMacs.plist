@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SupportedModelProperties</key>
+	<array>
+		<string>MacPro6,1</string>
+		<string>MacBookPro14,2</string>
+		<string>MacBookAir8,1</string>
+		<string>MacBookAir8,2</string>
+		<string>iMac16,2</string>
+		<string>iMac16,1</string>
+		<string>iMac18,2</string>
+		<string>MacBook10,1</string>
+		<string>Macmini7,1</string>
+		<string>MacBookPro13,3</string>
+		<string>iMac14,4</string>
+		<string>MacBookPro15,3</string>
+		<string>MacBookPro15,2</string>
+		<string>MacBookPro11,5</string>
+		<string>iMac17,1</string>
+		<string>MacBookPro11,3</string>
+		<string>MacBookPro11,2</string>
+		<string>MacBookPro11,1</string>
+		<string>MacBookPro15,4</string>
+		<string>iMac18,1</string>
+		<string>MacBookPro14,3</string>
+		<string>iMac18,3</string>
+		<string>MacBookPro14,1</string>
+		<string>iMac19,1</string>
+		<string>iMac19,2</string>
+		<string>MacBookPro15,1</string>
+		<string>MacBookPro12,1</string>
+		<string>MacBook8,1</string>
+		<string>iMac15,1</string>
+		<string>MacBookPro13,1</string>
+		<string>MacBookAir7,1</string>
+		<string>MacBookAir7,2</string>
+		<string>MacBookPro13,2</string>
+		<string>MacBook9,1</string>
+		<string>MacBookPro11,4</string>
+		<string>MacBookAir6,1</string>
+		<string>MacBookAir6,2</string>
+		<string>Macmini8,1</string>
+		<string>MacPro7,1</string>
+		<string>iMacPro1,1</string>
+	</array>
+</dict>
+</plist>
