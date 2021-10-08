@@ -160,7 +160,7 @@ NSString *rootPassword = nil;
         return;
     }
     
-    NSURL *jsonURL = [[NSURL alloc]initWithString:@"https://bensova.github.io/patched-sur/installers/Release.json"];
+    NSURL *jsonURL = [[NSURL alloc]initWithString:@"https://ben216k.github.io/patched-sur/Release.json"];
     NSData *jsonData = [[NSData alloc]initWithContentsOfURL:jsonURL];
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
     NSMutableArray *URLs = [NSMutableArray array];
