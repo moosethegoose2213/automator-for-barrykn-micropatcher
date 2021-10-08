@@ -9,7 +9,7 @@
 2) A copy of macOS Big Sur (optional)
 
 ## Instructions:
-1) Download the latest release here: [Download](https://github.com/moosethegoose2213/automator-for-barrykn-micropatcher/releases/download/v2.0/MicropatcherAutomator.dmg)
+1) Download the latest release here: [Download](https://github.com/moosethegoose2213/automator-for-barrykn-micropatcher/releases/download/v2.0.1/MicropatcherAutomator.zip)
 2) Format your USB drive as Mac OS Extended (Journaled) with GUID Partition Scheme using Disk Utility.
 3) Open the downloaded Disk Image and open `MicropatcherAutomator.app`
 4) Follow instructions in the application on how to create a bootable Big Sur USB for your unsupported Mac.
